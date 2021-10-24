@@ -56,5 +56,24 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="PublishLocations" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="Compare" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Person.sql" />
+    <Build Include="dbo\Tables\Address.sql" />
+    <Build Include="dbo\Views\ViewFullPerson.sql" />
+    <Build Include="dbo\Stored Procedures\SPPersonFilterByLastName.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Take-1.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocations\LocalDemoDB.publish.publish.xml" />
+    <None Include="Compare\Update1.scmp" />
   </ItemGroup>
 </Project>
